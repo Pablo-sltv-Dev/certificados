@@ -25,67 +25,90 @@ box-sizing: border-box;
     
 
 }
+
 body{
     background-color: var(--bg-primary);
     overflow-x: hidden;
     color: white;
+
+    overflow-x: hidden;
 }
 
- section.desactived {
+main {
+        width: 100vw;
+        height: 100vh;
+        
+    }
+    #opcs{
+        width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.deactivated{
+    width: 0px;
+    height: 0px;
     overflow: hidden;
+    position: absolute;
+    top: 0;
+}
+.active{
+    border: 1px solid white;
+    max-width: 100%;
+    height: 100%;
+    /* margin-bottom: 10px; */
+    gap: 5px;
+}
+
+#container_opcs.active_opcs{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 20%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+button:disabled{
     width: 0px;
     height: 0px;
     opacity: 0;
+    position: absolute;
+    bottom: 0;
+    
 }
 
 
-@media screen and (min-width:500px) {
-    
-    header{
-        width: 100vw;
-        height: 10vh;
-        border: 1px solid white;
-    }   
-    main{
-        width: 100vw;
-        height: 90vh;
-        overflow: hidden;
-        /* border: 1px solide white; */
-       
-        display: flex;
-        flex-direction: column;
-        /* justify-content: center; */
-        align-items: center;
-        overflow-x: hidden;
-        overflow-y: auto;
-        gap: 5px;
-    }
-    
-    
-    .crtfcds{
-        width: 75%;
-        min-height: 100%;
-        background-color: var(--bg-secondary);
-        border: 1px solid red;
-        display: flex;
-        /* flex-direction: column; */
-        flex-wrap: wrap;
-        /* gap: 10px; */
-        justify-content: center;
-        align-items: center;
-        /* margin: 0 10px; */
-        /* overflow-y: auto; */
-        overflow-x: auto;
-        gap: 10%;
-    }
-    .crtfcds figcaption{
-        display: block;
-    }
-    .crtfcds img{
-        max-width: 50%;
-        max-height: 35%;
-        
-    }
-
+.active > .crtfcds{
+   border: 1px solid red;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
+.active > .crtfcds > iframe{
+    
+  max-width: 50%;
+    height: 35%;
+}
+iframe > #document{
+    width: 100%;
+    height: 100%;
+}
+.crtfcds > .certificado{
+    max-width: 50%;
+    max-height: 50%;
+}
+  
+    
+@media screen and (min-width:501px) {
+    
+     
+}
+    
+    
+@media screen and (max-width:500px) {}
+
+
 
