@@ -1,5 +1,6 @@
 import { create_tag_section, get_tag, bto_on, troca_clt, situation_bto } from "../../src/criacoes.js"
 
+alert("Este site ainda está em desenvolvimento")
 
 const bto_dio = document.getElementById("o31q3e2f")
 
@@ -10,9 +11,9 @@ const bto_estudar = document.getElementById("3qre")
 const bto_bradesco = document.getElementById("24rfef")
 
 bto_dio.addEventListener("click", ()=>{
-    const section_dio = document.getElementById("e5gt3eg5")
+    const section_dio = document.getElementById("d1O")
     troca_clt(section_dio, "deactivated", "active" )
-    bto_on([bto_infinity, bto_estudar])
+    bto_on([bto_infinity, bto_estudar, bto_bradesco])
     
 
 
@@ -98,10 +99,10 @@ bto_dio.addEventListener("click", ()=>{
 })
 
 bto_infinity.addEventListener("click", ()=>{
-    const section = document.getElementById("wet52w")
+    const section = document.getElementById("schl")
 
     troca_clt(section, "deactivated", "active" )
-    bto_on([bto_dio, bto_estudar])
+    bto_on([bto_dio, bto_estudar, bto_bradesco])
 
 
     const bto_wk = get_tag("wk");
@@ -132,9 +133,9 @@ bto_infinity.addEventListener("click", ()=>{
 
 
 bto_estudar.addEventListener("click", ()=>{
-    const section = get_tag("34grfc")
+    const section = get_tag("smmrcd")
     troca_clt(section, "deactivated", "active")
-    bto_on([bto_dio, bto_infinity])
+    bto_on([bto_dio, bto_infinity, bto_bradesco])
 
     const bto_summer = get_tag("cc50");
 
@@ -148,8 +149,9 @@ bto_estudar.addEventListener("click", ()=>{
 })
 
 bto_bradesco.addEventListener("click", ()=>{
-    const section = get_tag("43rfgbg")
+    const section = get_tag("brdsc")
     troca_clt(section, "deactivated", "active")
+    bto_on([bto_dio, bto_estudar,bto_infinity])
 
     // _________________________-
 
@@ -157,11 +159,14 @@ bto_bradesco.addEventListener("click", ()=>{
     const bto_excel = get_tag("exl")
 
     bto_word.addEventListener("click", ()=>{
+        bto_on([bto_excel])
         const certificados = get_tag("wrd_certificado")
         troca_clt(certificados, "deactivated", "crtfcds")
     })
 
     bto_excel.addEventListener("click", ()=>{
+        bto_on([bto_word])
+
         const certificados = get_tag("xcl_certificado")
         troca_clt(certificados, "deactivated", "crtfcds")
 
