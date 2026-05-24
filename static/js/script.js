@@ -1,19 +1,26 @@
 import { create_tag_section, get_tag, bto_on, troca_clt, situation_bto } from "../../src/criacoes.js"
 
-alert("Este site ainda está em desenvolvimento")
+// alert("Este site ainda está em desenvolvimento")
 
-const bto_dio = document.getElementById("o31q3e2f")
+const bto_dio = get_tag("d10")
 
-const bto_infinity = document.getElementById("s24r23e")
+const bto_infinity = get_tag("ifsl")
 
-const bto_estudar = document.getElementById("3qre")
+const bto_estudar = get_tag("fdet")
 
-const bto_bradesco = document.getElementById("24rfef")
+const bto_bradesco = get_tag("fdcbdc");
+
+const bto_rock = get_tag("rks");
+
+const bto_senai = get_tag("sni");
+
+const bto_biju = get_tag("bjs")
+
 
 bto_dio.addEventListener("click", ()=>{
     const section_dio = document.getElementById("d1O")
     troca_clt(section_dio, "deactivated", "active" )
-    bto_on([bto_infinity, bto_estudar, bto_bradesco])
+    bto_on([bto_infinity, bto_estudar, bto_bradesco,, bto_rock, bto_senai, bto_biju])
     
 
 
@@ -102,7 +109,7 @@ bto_infinity.addEventListener("click", ()=>{
     const section = document.getElementById("schl")
 
     troca_clt(section, "deactivated", "active" )
-    bto_on([bto_dio, bto_estudar, bto_bradesco])
+    bto_on([bto_dio, bto_estudar, bto_bradesco,, bto_rock, bto_senai, bto_biju])
 
 
     const bto_wk = get_tag("wk");
@@ -135,7 +142,7 @@ bto_infinity.addEventListener("click", ()=>{
 bto_estudar.addEventListener("click", ()=>{
     const section = get_tag("smmrcd")
     troca_clt(section, "deactivated", "active")
-    bto_on([bto_dio, bto_infinity, bto_bradesco])
+    bto_on([bto_dio, bto_infinity, bto_bradesco,, bto_rock, bto_senai, bto_biju])
 
     const bto_summer = get_tag("cc50");
 
@@ -151,7 +158,7 @@ bto_estudar.addEventListener("click", ()=>{
 bto_bradesco.addEventListener("click", ()=>{
     const section = get_tag("brdsc")
     troca_clt(section, "deactivated", "active")
-    bto_on([bto_dio, bto_estudar,bto_infinity])
+    bto_on([bto_dio, bto_infinity, bto_estudar, bto_rock, bto_senai, bto_biju])
 
     // _________________________-
 
@@ -174,3 +181,37 @@ bto_bradesco.addEventListener("click", ()=>{
 
 
 })
+
+bto_rock.addEventListener("click", ()=>{
+    const section = get_tag("RkST")
+    troca_clt(section, "deactivated", "active")
+    bto_on([bto_dio, bto_infinity, bto_estudar, bto_bradesco, bto_senai, bto_biju])
+
+    const bto_i_a = get_tag("i_a")
+
+    bto_i_a.addEventListener("click", ()=>{
+        const certificados = get_tag("one_cert")
+        troca_clt(certificados, "deactivated", "crtfcds")
+
+    })
+
+})
+
+bto_senai.addEventListener("click", ()=>{
+    const section = get_tag("eni")
+    troca_clt(section, "deactivated", "active")
+    bto_on([bto_dio, bto_infinity, bto_estudar, bto_bradesco, bto_rock, bto_biju])
+
+
+
+})
+
+bto_biju.addEventListener("click", ()=>{
+    const section = get_tag("byj")
+    troca_clt(section, "deactivated", "active")
+    bto_on([bto_dio, bto_infinity, bto_estudar, bto_bradesco, bto_rock, bto_senai])
+
+    
+})
+
+
