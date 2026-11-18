@@ -33,6 +33,9 @@ body{
     overflow-x: hidden;
     color: white;
 }
+h3{
+    color: var(--text-secondary);
+}
 
 
 main {
@@ -60,7 +63,7 @@ main {
 }
 
 section.curso{
-    border: 1px solid white;
+    
     width: 100%;
     padding-block: 0.5rem;
 }
@@ -89,7 +92,12 @@ div.container {
     width: max-content;
     flex: 0 0 max-content;
     gap: 20px;
-    animation: rolagem 15s linear infinite;
+    animation-name: rolagem;
+    animation-duration: 15s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
 }
 
 .grupo {
